@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="499.0" prefWidth="697.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestion.sn.HelloController">
+   <children>
+      <Label layoutX="25.0" layoutY="37.0" text="Numero">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Label>
+      <Label layoutX="28.0" layoutY="104.0" text="Motant">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Label>
+      <Label layoutX="28.0" layoutY="173.0" text="Type Compte">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <TextField fx:id="cnumero" layoutX="25.0" layoutY="66.0" prefHeight="25.0" prefWidth="312.0" />
+      <TextField fx:id="cmotant" layoutX="28.0" layoutY="139.0" prefHeight="25.0" prefWidth="312.0" />
+      <ComboBox fx:id="combo" layoutX="28.0" layoutY="207.0" prefHeight="25.0" prefWidth="312.0" />
+      <Button fx:id="ajouter" layoutX="418.0" layoutY="79.0" mnemonicParsing="false" onAction="#btnAjouter" prefHeight="25.0" prefWidth="71.0" style="-fx-background-color: skyblue;" text="Ajouter" textFill="#f6f4f4">
+         <effect>
+            <ColorAdjust />
+         </effect></Button>
+      <Button fx:id="delete" layoutX="419.0" layoutY="126.0" mnemonicParsing="false" onAction="#btndelete" prefHeight="25.0" prefWidth="71.0" style="-fx-background-color: crimson;" text="Delete" textFill="#fbf2f2" />
+      <TableView fx:id="table" layoutX="14.0" layoutY="255.0" onMouseClicked="#charger" prefHeight="230.0" prefWidth="686.0">
+        <columns>
+          <TableColumn fx:id="colNumero" prefWidth="194.00002574920654" text="Numero" />
+          <TableColumn fx:id="colmontant" prefWidth="224.0000457763672" text="Montant" />
+            <TableColumn fx:id="coltypem" prefWidth="265.3332824707031" text="Type Compte" />
+            <TableColumn fx:id="colid" prefWidth="53.3333740234375" text="Id" visible="false" />
+        </columns>
+      </TableView>
+      <Button fx:id="annuler" layoutX="419.0" layoutY="173.0" mnemonicParsing="false" onAction="#annuler" prefHeight="25.0" prefWidth="71.0" text="Annuler" />
+      <TextField fx:id="searchFild" layoutX="379.0" layoutY="207.0" />
+      <Button layoutX="540.0" layoutY="207.0" mnemonicParsing="false" onAction="#btnSearch" text="Search" />
+      <Button layoutX="415.0" layoutY="37.0" mnemonicParsing="false" onAction="#btnModif" prefHeight="25.0" prefWidth="77.0" text="Modif" />
+   </children>
+</AnchorPane>
