@@ -1,0 +1,22 @@
+pipeline{
+     agent any
+     stages{
+          stage('Build'){
+              steps{
+                //Perform steps related to this stage
+              }
+          }
+          stage('Test'){
+              steps{
+                //Perform steps related to this stage
+              }
+          }
+     
+       stage('Deploy'){
+              steps{
+                //Perform steps related to this stage
+              }
+          }
+     
+
+}
